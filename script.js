@@ -27,9 +27,11 @@ boxes.forEach((box) => {
         console.log("box clicked");
         if(turnO) {
             box.innerText = "O";
+            box.style.color = "#127C56";
             turnO = false; 
         } else {
             box.innerText = "X";
+            box.style.color = "red";
             turnO = true;
         }
         box.disabled = true;
@@ -45,6 +47,7 @@ const enableBoxes = () => {
     for(let box of boxes) {
         box.disabled =false;
         box.innerText =""
+        box.style.backgroundColor = "white";
     }
 }
 const showWinner=(winner)=>{
